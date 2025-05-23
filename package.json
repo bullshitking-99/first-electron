@@ -7,7 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron-forge start",
     "package": "electron-forge package",
+    "publish": "dotenv electron-forge publish",
     "make": "electron-forge make"
+  },
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/bullshitking-99/first-electron.git"
   },
   "author": "",
   "license": "MIT",
@@ -20,11 +25,14 @@
     "@electron-forge/maker-zip": "^7.8.1",
     "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
     "@electron-forge/plugin-fuses": "^7.8.1",
+    "@electron-forge/publisher-github": "^7.8.1",
     "@electron/fuses": "^1.8.0",
+    "dotenv-cli": "^8.0.0",
     "electron": "^36.2.1",
     "electron-reloader": "^1.2.3"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "electron-squirrel-startup": "^1.0.1",
+    "update-electron-app": "^3.1.1"
   }
 }

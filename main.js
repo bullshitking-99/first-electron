@@ -1,9 +1,13 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
+const { updateElectronApp } = require("update-electron-app");
+
+// 启用自动更新, 需要在 package 中添加一下repo的信息
+updateElectronApp();
 
 // ✅ 自动重启：保存 main.js 自动重启 Electron
 try {
-  require("electron-reloader")(module);
+  // require("electron-reloader")(module);
 } catch (_) {}
 
 const createWindow = () => {
